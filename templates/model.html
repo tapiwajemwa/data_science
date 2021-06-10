@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ModelForm</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class='container'>
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col-6">
+                    <br><br>
+                    <div class="jumbotron">
+                        <h3>Fill in the form for predictions                     </h3>
+                        <a href="{% url 'result' %}"><button>See Results</button></a>
+                        <form method='post' onSubmit= 'www.google.com'>
+                        {{ form.as_p }}
+                        {% csrf_token %}
+                        <br>
+                        <button type="submit" method='POST'>Submit</button>
+                        <!-- <input type="submit" name="Submit" value="Submit"> -->
+                        </form>
+                    </div>
+                </div>
+                <div class="col">
+                </div>
+            </div>
+        </div>
+            
+    </body>
+</html>
